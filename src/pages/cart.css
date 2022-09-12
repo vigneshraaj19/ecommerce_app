@@ -1,0 +1,116 @@
+.Wrapper11
+{
+  padding: 20px;
+}
+.Title11 {
+  font-weight: 300;
+  text-align: center;
+}
+
+.Top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+.TopButton {
+  padding: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.TopText{
+  text-decoration: underline;
+  cursor: pointer;
+  margin: 0px 10px;
+}
+.Bottom {
+  display: flex;
+  justify-content: space-between;
+ 
+}
+.Info11 {
+  flex: 3;
+
+}
+.Product11 {
+  display: flex;
+  justify-content: space-between;
+
+}
+.ProductDetail {
+  flex: 2;
+  display: flex;}
+
+.Image11{
+  width: 200px;
+}
+
+.Details {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+
+.PriceDetail{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ProductAmountContainer{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+
+.ProductAmount {
+  font-size: 24px;
+  margin: 5px;
+}
+
+.ProductPrice {
+  font-size: 30px;
+  font-weight: 200;
+}
+.Hr {
+  background-color: #eee;
+  border: none;
+  height: 1px;
+}
+.Summary{
+  flex: 1;
+  border: 0.5px solid lightgray;
+  border-radius: 10px;
+  padding: 20px;
+  height: 50vh;
+}
+.SummaryTitle {
+  font-weight: 200;
+}
+
+.Button11{
+  width: 100%;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  cursor:pointer;
+}
+.SummaryItem {
+  margin: 30px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.SummaryItem1 {
+
+  margin: 30px 0px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  font-size:  24px;
+}

@@ -1,0 +1,25 @@
+
+.Title1{
+  margin: 20px;
+}
+
+.FilterContainer1{
+  display: flex;
+  justify-content: space-between;
+}
+
+.Filter1 {
+  margin: 20px;
+}
+
+.FilterText1 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-right: 20px;
+  
+}
+
+select{
+  padding: 10px;
+  margin-right: 20px;
+}
