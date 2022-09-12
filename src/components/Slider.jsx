@@ -39,8 +39,6 @@ background-color: #${(props) => props.bg};
 `;
 
 export default function Slider() {
-
-
         
     const [slideIndex, setSlideIndex] = useState(0);
     const handleClick = (direction) => {
@@ -63,9 +61,9 @@ export default function Slider() {
               <img src={item.img}  ></img>
             </div>
             <div className="InfoContainer">
-              <div className="Title">{item.title}</div>
+              <div className="Title12">{item.title}</div>
               <div className="Desc">{item.desc}</div>
-              <div className="Button">SHOW NOW</div>
+              <div className="Button12">SHOW NOW</div>
             </div>
          </Slide>
         ))}

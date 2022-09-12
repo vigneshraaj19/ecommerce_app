@@ -62,7 +62,7 @@ const Icon = styled.div`
 `;
   return (
     <Container>
-    <img src={item.img} />
+    <Image src={item.img} />
     <Info>
       <Icon>
         <ShoppingCartOutlined />
