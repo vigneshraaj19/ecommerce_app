@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@material-ui/icons";
 import { useState } from "react";
 import { sliderItems } from "../data";
+import { useNavigate } from "react-router-dom";
 
 const Arrow = styled.div`
 width: 50px;
@@ -48,6 +49,10 @@ export default function Slider() {
         setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0);
       }
     };
+    const navigate = useNavigate();
+const handleClicks = (e) => {
+  navigate("/products/coat");
+};
         
   return (
     <div className="Container1">
@@ -63,7 +68,7 @@ export default function Slider() {
             <div className="InfoContainer">
               <div className="Title12">{item.title}</div>
               <div className="Desc">{item.desc}</div>
-              <div className="Button12">SHOW NOW</div>
+              <div className="Button12" onClick={handleClicks}>SHOW NOW</div>
             </div>
          </Slide>
         ))}

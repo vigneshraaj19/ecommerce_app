@@ -1,6 +1,8 @@
 import React from 'react'
 import "./categoryitem.css"
 import styled from "styled-components";
+import { Link } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 function CategoryItem({ item }) {
 
@@ -32,11 +34,13 @@ const Button = styled.button`
 
   return (
     <div className="Container4">
+      <Link to={`/products/${item.cat}`} >
       <img src={item.img} />
       <Info>
         <Title>{item.title}</Title>
-        <Button>SHOP NOW</Button>
+        <Button >SHOP NOW</Button>
       </Info>
+      </Link>
     </div>
   )
 }
