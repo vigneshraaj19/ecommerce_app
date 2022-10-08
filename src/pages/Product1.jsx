@@ -9,9 +9,11 @@ import { useEffect, useState } from "react";
 import { publicRequest } from "../requestMethods";
 import { addProduct } from "../redux/cartRedux";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 function Product1() {
   const location = useLocation();
+  const navigate = useNavigate();
   const id = location.pathname.split("/")[2];
   const [product, setProduct] = useState({});
   const [quantity, setQuantity] = useState(1);
@@ -40,6 +42,7 @@ function Product1() {
     dispatch(
       addProduct({ ...product, quantity })
     );
+    navigate("/cart");
     
   };
  

@@ -9,8 +9,7 @@ function CheckoutProduct({ id, img, title, price, quantity }) {
   const cart = useSelector((state) => state.cart);
 
   const remove=()=>{
-    console.log("remove",id);
-  
+  console.log(cart);
 
      dispatch(
       removeProduct({ ...cart, quantity,price })

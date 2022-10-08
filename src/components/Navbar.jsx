@@ -4,12 +4,15 @@ import { Search, ShoppingCartOutlined } from "@material-ui/icons";
 import "./navbar.css"
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 function Navbar() {
   const quantity = useSelector(state=>state.cart.quantity)
+  const navigate = useNavigate();
   const handleLogout = () => {
-		
+    navigate("/login");
 		localStorage.removeItem("persist:root");
 	    window.location.reload();
+      
 	};
   return (
     <div className="Container">

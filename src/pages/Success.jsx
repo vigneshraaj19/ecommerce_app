@@ -4,12 +4,15 @@ import { useSelector } from "react-redux";
 import { useLocation } from "react-router";
 import { userRequest } from "../requestMethods";
 import { useNavigate } from "react-router-dom";
+import { clearProduct } from "../redux/cartRedux";
+import { useDispatch } from "react-redux";
 
 
 function Success() {
   const location = useLocation();
+  const dispatch = useDispatch();
    console.log("location",location);
-
+   const cartclear = useSelector((state) => state.cart);
   const data = location.state.stripeData;
   const cart = location.state.products;
 
@@ -27,6 +30,7 @@ function Success() {
 
         const res = await userRequest.post("/orders", {
           userId: currentUser._id,
+          username: currentUser.username,
           products: cart.products.map((item) => ({
             productId: item._id,
             quantity: item.quantity,
@@ -35,6 +39,9 @@ function Success() {
           amount: cart.total,
           address: data.billing_details.address,
         });
+        dispatch(
+          clearProduct({ ...cartclear })
+        );
        
       } catch {}
     };
