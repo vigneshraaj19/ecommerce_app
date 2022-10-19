@@ -22,7 +22,7 @@ function Navbar() {
         
         </div>
         <div className="Center">
-        <div className="Logo">E-Store</div>
+        <div className="Logo">FLIGHT BOOKING APP</div>
         </div>
         <div className="Right">
         
@@ -32,9 +32,7 @@ function Navbar() {
         <Link className="MenuItem" onClick={handleLogout}>  SIGN OUT</Link>
         <div className="MenuItem">
           <Link to="/cart">
-            <Badge badgeContent={quantity} color="primary">
-              <ShoppingCartOutlined />
-            </Badge>
+            
             </Link>
           </div>
         </div>
