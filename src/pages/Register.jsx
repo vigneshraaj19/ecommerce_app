@@ -19,7 +19,7 @@ function Register() {
 
    
     
-    const url1 = "http://localhost:5000";
+    const url1 = "https://flight-api02.herokuapp.com";
 const url=`${url1}/api/auth/register`
     axios.post(url,data)
 

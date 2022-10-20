@@ -13,7 +13,7 @@ function Products({  filter, filters ,sort, journey}) {
   useEffect(() => {
     const getProducts = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/products");
+        const res = await axios.get("https://flight-api02.herokuapp.com/api/products");
         console.log(res.data);
         setProducts(res.data);
       } catch (err) {}
