@@ -99,17 +99,14 @@ useEffect(() => {
 
 
 
-  var d = new Date(journey);
- const month = d.getMonth()+1; 
- console.log("value",month);
 
- 
- var today=new Date();
-  var mm=today.getMonth()+1;
-  console.log("current",mm)
+var past_date = new Date(journey);
+var current_date = new Date();
 
-  var value=month-mm;
-  console.log(value);
+var value = (past_date.getFullYear()*12 + past_date.getMonth()) - (current_date .getFullYear()*12 + current_date .getMonth());
+console.log("difference",value);
+
+
 
 
   switch(value) {
@@ -126,25 +123,25 @@ useEffect(() => {
       console.log(totalValue)
       
       break;
-    case -9:
+    case 3:
       var totalValue =item.price-Math.round(item.price * ( 20/ 100 ));
       var a=20
       console.log(totalValue)
     
       break;
-      case -8:
+      case 4:
         var totalValue =item.price-Math.round(item.price * ( 25/ 100 ));
         var a=25
         console.log(totalValue)
      
       break;
-    case -7:
+    case 5:
       var totalValue =item.price-Math.round(item.price * ( 30/ 100 ));
       var a=30
       console.log(totalValue)
      
       break;
-    case -6:
+    case 6:
       var totalValue =item.price-Math.round(item.price * ( 35/ 100 ));
       var a=35
       console.log(totalValue)
